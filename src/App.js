@@ -13,20 +13,20 @@ class App extends React.Component{
           completed: false
         },
         {
-          item: "Doubles sleeping bag", 
+          item: "Double sleeping bag", 
           completed: false
         },
         {
         item: "Pillows", 
         completed: false
-      }
-    ]
+        }
+      ]
+    }
   }
-}
   
   render() {
     return (
-      <div className="App">
+      <div className="App container h-100">
         <List items={this.state.items} />
       </div>
     );
