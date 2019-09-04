@@ -9,16 +9,19 @@ class App extends React.Component{
     this.state = {
       items: [
         {
-          item: "Four person tent", 
+          id: 1,
+          name: "Four person tent", 
           completed: false
         },
         {
-          item: "Double sleeping bag", 
-          completed: false
+          id: 2,
+          name: "Double sleeping bag", 
+          completed: true
         },
         {
-        item: "Pillows", 
-        completed: false
+          id: 3,
+          name: "Pillows", 
+          completed: false
         }
       ]
     }

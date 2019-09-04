@@ -1,23 +1,25 @@
 import React from 'react';
+import ListItem from './ListItem';
+import PropTypes from 'prop-types';
 
 class List extends React.Component{
 
     render() {
 
-        const items = this.props.items.map(a => <p>{a.item}</p>);
+        const items = this.props.items.map(item => <ListItem item={item} key={item.id}/>);
 
         return (
-            <div className="row h-100 List justify-content-center align-items-center">
-                <div className="col-sm-12 my-auto">
-                    
-                    {items}
-                    <input type="text" placeholder="What else do you need?" />
-                </div>
-            
+            <div className="List justify-content-center align-items-center">                   
+                {items}                     
             </div>
         );
     }
     
+  }
+
+  //PropTypes
+  List.propTypes = {
+      items: PropTypes.array.isRequired
   }
 
   export default List;
