@@ -20,7 +20,8 @@ export class ListItem extends Component {
             <div style={this.getStyle()}>
               <p> 
                 <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)}/> {" "}            
-                {name} 
+                {name}
+                <button class="btn btn-danger btn-sm" id="deleteBtn" onClick={this.props.deleteItem.bind(this, id)}><i class="fa fa-remove"></i></button> 
               </p>
             </div>
         )
@@ -31,5 +32,6 @@ export class ListItem extends Component {
 ListItem.propTypes = {
     item: PropTypes.object.isRequired
 }
+
 
 export default ListItem

@@ -28,6 +28,7 @@ class App extends React.Component{
     }
   }
   
+  // Toggle complete
   toggleComplete = (id) => {
     this.setState({items: this.state.items.map(item => {
       if(item.id === id) {
@@ -37,10 +38,15 @@ class App extends React.Component{
     })})
   }
 
+  // Delete item
+  deleteItem = (id) => {
+    this.setState({items: [...this.state.items.filter(item => item.id !== id)]})
+  }
+
   render() {
     return (
       <div className="App container h-100">
-        <List items={this.state.items} toggleComplete={this.toggleComplete} />
+        <List items={this.state.items} toggleComplete={this.toggleComplete} deleteItem={this.deleteItem} />
       </div>
     );
   }

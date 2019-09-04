@@ -8,3 +8,9 @@ p {
     margin: 0;
     padding: 0;
 }
+
+#deleteBtn {
+    
+    border-radius: 50%;
+    margin-left: 5px;
+}
