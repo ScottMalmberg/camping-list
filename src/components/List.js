@@ -3,10 +3,12 @@ import ListItem from './ListItem';
 import PropTypes from 'prop-types';
 
 class List extends React.Component{
+    
 
     render() {
 
-        const items = this.props.items.map(item => <ListItem item={item} key={item.id}/>);
+        const items = this.props.items.map(item => 
+        <ListItem item={item} key={item.id} toggleComplete={this.props.toggleComplete}/>);
 
         return (
             <div className="List justify-content-center align-items-center">                   

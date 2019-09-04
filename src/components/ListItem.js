@@ -3,22 +3,25 @@ import PropTypes from 'prop-types';
 
 export class ListItem extends Component {
     getStyle = () => {
-        if(this.props.item.completed) {
-            return {
-                textDecoration: 'line-through'
-            }
-        }
-        else {
-            return {
-                textDecoration: 'none'
-            }    
+        return {
+            background: '#f4f4f4',
+            padding: '10px',
+            borderBottom: '1px #ccc dotted',
+            textDecoration: this.props.item.completed ? 'line-through' : 'none'
+            
+
         }
     }
 
+
     render() {
+        const { id, name } = this.props.item;
         return (
             <div style={this.getStyle()}>
-              <p> {this.props.item.name} </p>
+              <p> 
+                <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)}/> {" "}            
+                {name} 
+              </p>
             </div>
         )
     }
