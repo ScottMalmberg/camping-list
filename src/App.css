@@ -1,16 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  color: black;
-}
+
 
 p {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
 #deleteBtn {
-    
+    float: right;
     border-radius: 50%;
-    margin-left: 5px;
+    margin-bottom: 0px;  
+}
+
+#deleteBtn:hover {
+    color: black;
 }

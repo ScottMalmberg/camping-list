@@ -21,7 +21,7 @@ export class ListItem extends Component {
               <p> 
                 <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)}/> {" "}            
                 {name}
-                <button class="btn btn-danger btn-sm" id="deleteBtn" onClick={this.props.deleteItem.bind(this, id)}><i class="fa fa-remove"></i></button> 
+                <button className="btn btn-danger btn-sm" id="deleteBtn" onClick={this.props.deleteItem.bind(this, id)}><i className="fa fa-remove"></i></button> 
               </p>
             </div>
         )

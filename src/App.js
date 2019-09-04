@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import List from './components/List'
-import { toUnicode } from 'punycode';
+import Header from './components/Header'
 
 class App extends React.Component{
   constructor(props) {
@@ -45,7 +45,8 @@ class App extends React.Component{
 
   render() {
     return (
-      <div className="App container h-100">
+      <div className="App container">
+        <Header />
         <List items={this.state.items} toggleComplete={this.toggleComplete} deleteItem={this.deleteItem} />
       </div>
     );
