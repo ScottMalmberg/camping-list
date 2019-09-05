@@ -1,4 +1,6 @@
-
+.container-fluid {
+    padding:0;
+}
 
 p {
     margin-bottom: 0px;

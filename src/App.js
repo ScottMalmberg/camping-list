@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import List from './components/List'
 import Header from './components/Header'
+import AddItem from './components/AddItem';
 
 class App extends React.Component{
   constructor(props) {
@@ -28,7 +29,7 @@ class App extends React.Component{
     }
   }
   
-  // Toggle complete
+  // toggle complete
   toggleComplete = (id) => {
     this.setState({items: this.state.items.map(item => {
       if(item.id === id) {
@@ -38,16 +39,36 @@ class App extends React.Component{
     })})
   }
 
-  // Delete item
+  // delete item
   deleteItem = (id) => {
     this.setState({items: [...this.state.items.filter(item => item.id !== id)]})
   }
 
+  // add item
+  addItem = (title) => {
+    const newItem = {
+      id: 4,
+      title,
+      completed: false
+    }
+    this.setState({items: [...this.state.items, newItem]})
+  }
+
   render() {
     return (
-      <div className="App container">
-        <Header />
-        <List items={this.state.items} toggleComplete={this.toggleComplete} deleteItem={this.deleteItem} />
+      <div className="App container-fluid">
+        <div className="row h-100">
+          <div className="col">
+            <AddItem addItem={this.addItem}/>
+          </div>
+          <div className="col">
+            <Header />  
+            <List 
+            items={this.state.items} 
+            toggleComplete={this.toggleComplete} 
+            deleteItem={this.deleteItem} />
+          </div>          
+        </div>       
       </div>
     );
   }
