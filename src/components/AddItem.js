@@ -19,21 +19,21 @@ export class AddItem extends Component {
 
     render() {
         return (
-          <form className="form-inline" onSubmit={this.onSubmit}>
-            <input 
-                type="text" 
-                name="name" 
-                placeholder="Add an item..." 
-                value={this.state.name} 
-                onChange={this.onChange}
-            />
+            <form className="form-control-inline text-center" onSubmit={this.onSubmit}>
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Add an item..." 
+                    value={this.state.name} 
+                    onChange={this.onChange}
+                />
 
-            <input 
-                type="submit" 
-                value="Add to List" 
-                className="btn"
-            />
-          </form>
+                <input 
+                    type="submit" 
+                    value="Add to List" 
+                    className="btn"
+                />
+            </form>         
         );
     }
 }

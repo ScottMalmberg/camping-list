@@ -3,6 +3,7 @@ import './App.css';
 import List from './components/List'
 import Header from './components/Header'
 import AddItem from './components/AddItem';
+import uuid from 'uuid';
 
 class App extends React.Component{
   constructor(props) {
@@ -11,17 +12,17 @@ class App extends React.Component{
     this.state = {
       items: [
         {
-          id: 1,
+          id: uuid.v4(),
           name: "Four person tent", 
           completed: false
         },
         {
-          id: 2,
+          id: uuid.v4(),
           name: "Double sleeping bag", 
           completed: false
         },
         {
-          id: 3,
+          id: uuid.v4(),
           name: "Pillows", 
           completed: false
         }
@@ -47,7 +48,7 @@ class App extends React.Component{
   // add item
   addItem = (name) => {
     const newItem = {
-      id: 4,
+      id: uuid.v4(),
       name: name,
       completed: false
     }
@@ -57,12 +58,14 @@ class App extends React.Component{
   render() {
     return (
       <div className="App container-fluid">
-        <div className="row h-100">
-          <div className="col">
+        <Header />  
+        <div className="row vh-100">
+          
+          <div className="col align-self-center mx-auto">
             <AddItem addItem={this.addItem}/>
           </div>
           <div className="col">
-            <Header />  
+            
             <List 
             items={this.state.items} 
             toggleComplete={this.toggleComplete} 
