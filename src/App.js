@@ -45,10 +45,10 @@ class App extends React.Component{
   }
 
   // add item
-  addItem = (title) => {
+  addItem = (name) => {
     const newItem = {
       id: 4,
-      title,
+      name: name,
       completed: false
     }
     this.setState({items: [...this.state.items, newItem]})
