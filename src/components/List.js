@@ -16,8 +16,8 @@ class List extends React.Component{
         />);
 
         return (
-            <div className="list justify-content-center align-items-center">  
-                <h3 className="text-center" style={{color: "white"}}>Need to Pack</h3>                 
+            <div className="list">  
+                                 
                 {items}                     
             </div>
         );

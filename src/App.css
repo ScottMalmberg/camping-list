@@ -1,10 +1,18 @@
+*:focus {
+    outline: none;
+}
+
 body {
     font-family: 'Livvic', sans-serif;
 }
 
 .container-fluid {
-    padding:0px;
+    overflow: hidden;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
 }
 
 p {
@@ -16,34 +24,76 @@ p {
     float: right;
     border-radius: 50%;
     margin-bottom: 0px;  
+    background-color: transparent;
+    border: none;
+    transition: background-color 250ms ease;
+    color: white;
 }
 
 #deleteBtn:hover {
-    color: black;
+    background-color: #CD8987;
+    transition: background-color 250ms ease;
 }
 
 .navbar {
-    background-image: url('./images/forest.jpg');
+    
     color: white;
     height: 10vh;
 }
 
-.btn-submit {
-    
-    background-color: #228b22;
-    color: white;
+.add-btn {
+    border-color: #CDD6DD!important;
+    transition: background-color 250ms ease!important;
+}
+
+.add-btn:hover {
+    background-color: #CDD6DD;
+    transition: background-color 250ms ease;
 }
 
 .main {
-    background-image: url('./images/dirt.png');
-    height: 90vh;
+    min-height: 50vh;
+    min-width: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(25,25,25,.25);
+    background-color: #CDACA1;
+    padding: 15px;
+    color: white;
 }
 
 .addItem {
     display: flex;
+    justify-content: space-between;
+}
+
+.addItem input {
+    transition: border-color 250ms ease;
+    background-color: transparent;
+    border: 1px gray solid;
+    border-radius: 1em;
+    padding: 5px 15px;
+    color: white;
+}
+
+.addItem input:focus {
+    transition: border-color 250ms ease;
+    border-color: #CDD6DD;
 }
 
 .list {
-    margin-top: 20px;
+    max-height: 40vh;
     overflow: auto;
+    width: 100%;
+    flex: 1;
 }
+
+.App {
+    background-image: url('./images/forest.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

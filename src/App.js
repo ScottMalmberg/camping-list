@@ -58,21 +58,16 @@ class App extends React.Component{
   render() {
     return (
       <div className="App container-fluid">
-        <Header />  
-        <div className="row main">
-          
-          <div className="col align-self-center mx-auto">
-            
-          </div>
-          <div className="col">
-            
-            <List 
+        
+        <div className="main">
+          <h3 className="text-center" style={{color: "#CCFBFE", fontSize: "50px"}}>CampingList</h3>
+          <List 
             items={this.state.items} 
             toggleComplete={this.toggleComplete} 
             deleteItem={this.deleteItem} />
-            <AddItem addItem={this.addItem}/>
-          </div>          
-        </div>       
+            <AddItem addItem={this.addItem}/>       
+        </div>  
+       
       </div>
     );
   }
