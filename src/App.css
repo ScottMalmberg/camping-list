@@ -1,5 +1,10 @@
+body {
+    font-family: 'Livvic', sans-serif;
+}
+
 .container-fluid {
     padding:0;
+    height: 100vh;
 }
 
 p {
@@ -15,4 +20,25 @@ p {
 
 #deleteBtn:hover {
     color: black;
+}
+
+.navbar {
+    background-image: url('./images/forest.jpg');
+    color: white;
+    height: 10vh;
+}
+
+.btn-submit {
+    margin-left: 5px;
+    background-color: #228b22;
+    color: white;
+}
+
+.main {
+    background-image: url('./images/dirt.png');
+    height: 90vh;
+}
+
+.addItem {
+    display: block;
 }

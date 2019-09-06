@@ -19,7 +19,7 @@ export class AddItem extends Component {
 
     render() {
         return (
-            <form className="form-control-inline text-center" onSubmit={this.onSubmit}>
+            <form className="text-center addItem" onSubmit={this.onSubmit}>
                 <input 
                     type="text" 
                     name="name" 
@@ -31,7 +31,7 @@ export class AddItem extends Component {
                 <input 
                     type="submit" 
                     value="Add to List" 
-                    className="btn"
+                    className="btn-submit"
                 />
             </form>         
         );

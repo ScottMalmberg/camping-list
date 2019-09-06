@@ -59,10 +59,10 @@ class App extends React.Component{
     return (
       <div className="App container-fluid">
         <Header />  
-        <div className="row vh-100">
+        <div className="row main">
           
           <div className="col align-self-center mx-auto">
-            <AddItem addItem={this.addItem}/>
+            
           </div>
           <div className="col">
             
@@ -70,6 +70,7 @@ class App extends React.Component{
             items={this.state.items} 
             toggleComplete={this.toggleComplete} 
             deleteItem={this.deleteItem} />
+            <AddItem addItem={this.addItem}/>
           </div>          
         </div>       
       </div>
