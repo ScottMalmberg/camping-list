@@ -3,7 +3,7 @@ body {
 }
 
 .container-fluid {
-    padding:0;
+    padding:0px;
     height: 100vh;
 }
 
@@ -29,7 +29,7 @@ p {
 }
 
 .btn-submit {
-    margin-left: 5px;
+    
     background-color: #228b22;
     color: white;
 }
@@ -40,5 +40,10 @@ p {
 }
 
 .addItem {
-    display: block;
+    display: flex;
+}
+
+.list {
+    margin-top: 20px;
+    overflow: auto;
 }

@@ -26,12 +26,13 @@ export class AddItem extends Component {
                     placeholder="Add an item..." 
                     value={this.state.name} 
                     onChange={this.onChange}
-                />
-
+                    style={{flex: "10", padding: "5"}}
+                />              
                 <input 
                     type="submit" 
                     value="Add to List" 
                     className="btn-submit"
+                    style={{flex:"1"}}
                 />
             </form>         
         );
