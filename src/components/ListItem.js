@@ -7,8 +7,8 @@ export class ListItem extends Component {
         
             padding: '10px',
             borderBottom: '1px #ccc solid',
-            textDecoration: this.props.item.completed ? 'line-through' : 'none'
-            
+            backgroundColor: this.props.item.completed ? '#CCFBFE' : 'transparent',
+            color: this.props.item.completed ? 'black' : 'white'
 
         }
     }
@@ -17,11 +17,11 @@ export class ListItem extends Component {
     render() {
         const { id, name } = this.props.item;
         return (
-            <div style={this.getStyle()}>
+            <div style={this.getStyle()} className="item">
               <p> 
-                <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)}/> {" "}            
+                <button id="checkBtn" onClick={this.props.toggleComplete.bind(this, id)}><i className="fa fa-check"></i></button>         
                 {name}
-                <button className="" id="deleteBtn" onClick={this.props.deleteItem.bind(this, id)}><i className="fa fa-remove"></i></button> 
+                <button id="deleteBtn" onClick={this.props.deleteItem.bind(this, id)}><i className="fa fa-remove"></i></button> 
               </p>
             </div>
         )

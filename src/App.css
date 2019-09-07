@@ -2,10 +2,6 @@
     outline: none;
 }
 
-body {
-    font-family: 'Livvic', sans-serif;
-}
-
 .container-fluid {
     overflow: hidden;
     height: 100vh;
@@ -18,6 +14,26 @@ body {
 p {
     margin-bottom: 0px;
     padding: 0px;
+}
+
+#checkBtn {
+    border-radius: 50%;
+    margin-bottom: 0px;  
+    background-color: transparent;
+    border: none;
+    transition: color 250ms ease;
+    color: white;
+    outline: none;
+}
+
+#checkBtn:hover {
+    color: #CCFBFE;
+    transition: color 250ms ease;
+}
+
+.item {
+    transition: background-color 250ms ease;
+    border-radius: 5px;
 }
 
 #deleteBtn {
@@ -33,12 +49,6 @@ p {
 #deleteBtn:hover {
     background-color: #CD8987;
     transition: background-color 250ms ease;
-}
-
-.navbar {
-    
-    color: white;
-    height: 10vh;
 }
 
 .add-btn {
@@ -73,7 +83,7 @@ p {
 .addItem input {
     transition: border-color 250ms ease;
     background-color: transparent;
-    border: 1px gray solid;
+    border: 1px #CDCACC solid;
     border-radius: 1em;
     padding: 5px 15px;
     color: white;

@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import List from './components/List'
-import Header from './components/Header'
 import AddItem from './components/AddItem';
 import uuid from 'uuid';
 
