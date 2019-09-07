@@ -21,14 +21,16 @@ p {
     margin-bottom: 0px;  
     background-color: transparent;
     border: none;
-    transition: color 250ms ease;
+    transition: background-color 250ms ease;
     color: white;
     outline: none;
+    margin-right: 10px;
 }
 
 #checkBtn:hover {
-    color: #CCFBFE;
-    transition: color 250ms ease;
+    background-color: #CCFBFE;
+    transition: background-color 250ms ease;
+
 }
 
 .item {
@@ -78,6 +80,7 @@ p {
 .addItem {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .addItem input {

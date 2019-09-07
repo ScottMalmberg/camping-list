@@ -8,9 +8,8 @@ export class ListItem extends Component {
             padding: '10px',
             borderBottom: '1px #ccc solid',
             backgroundColor: this.props.item.completed ? '#CCFBFE' : 'transparent',
-            color: this.props.item.completed ? 'black' : 'white'
-
-        }
+            color: this.props.item.completed ? 'black' : 'white',
+         }
     }
 
 
