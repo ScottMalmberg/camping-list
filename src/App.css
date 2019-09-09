@@ -28,9 +28,9 @@ p {
 }
 
 #checkBtn:hover {
-    background-color: #CCFBFE;
+    background-color: rgba(204,251,254,.5);
     transition: background-color 250ms ease;
-
+    
 }
 
 .item {

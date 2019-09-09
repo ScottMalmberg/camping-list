@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 export class ListItem extends Component {
     getStyle = () => {
         return {
-        
             padding: '10px',
             borderBottom: '1px #ccc solid',
             backgroundColor: this.props.item.completed ? '#CCFBFE' : 'transparent',
