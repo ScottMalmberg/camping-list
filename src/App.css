@@ -110,3 +110,17 @@ p {
     background-repeat: no-repeat;
 }
 
+.weather {
+    min-height: 20vh;
+    min-width: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(25,25,25,.25);
+    background-color: #CDACA1;
+    padding: 15px;
+    color: white;
+    margin-right: 25px;
+}

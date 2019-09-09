@@ -3,6 +3,8 @@ import './App.css';
 import List from './components/List'
 import AddItem from './components/AddItem';
 import uuid from 'uuid';
+import Weather from './components/Weather';
+
 
 class App extends React.Component{
   constructor(props) {
@@ -57,7 +59,10 @@ class App extends React.Component{
   render() {
     return (
       <div className="App container-fluid">
-        
+        <div className="weather">
+          <Weather />
+        </div>
+
         <div className="main">
           <h3 className="text-center" style={{color: "#CCFBFE", fontSize: "50px"}}>CampingList</h3>
           <List 

@@ -5,21 +5,43 @@ export class Weather extends Component {
         super(props);
 
         this.state = {
-            forecast: []
+        
+            minTemp: [],
+            maxTemp: []
+        
+            
         };
     }
     
     componentWillMount() {
-        fetch('https://api.darksky.net/forecast/8b8ccb77c80ab76e352e9a5d8a96204c/47.286969987486124,-115.3384599811145?exclude=[currently,minutely,hourly,alerts,flags]')
+        fetch('http://api.weatherbit.io/v2.0/forecast/daily?city=Spokane,WA&units=I&days=5&key=45215d29d9a7469e97f7d9879eaa6e0f')
+        .then(response => {
+            return response.json();
+        })
         .then(results => {
-            console.log(results.json())
-            return results.json();
+            console.log(results);
+            results.data.map(day => {
+                return this.setState({minTemp: [...this.state.minTemp, day.min_temp], maxTemp: [...this.state.maxTemp, day.max_temp]})   
+            })
+            
         })
     }
     
     render() {
+        const {minTemp, maxTemp} = this.state;
+        const forecast = minTemp.map((current, i) => 
+            <div className="col">
+                <h3>Day {i+1}</h3>
+                <br/>
+                <p>High: {maxTemp[i]}</p>
+                <p>Low: {current}</p> 
+            </div>
+        )
+        
         return (
-            <div>
+            <div className="row">
+                
+                {forecast}
                 
             </div>
         )
