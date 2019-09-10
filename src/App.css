@@ -59,8 +59,8 @@ p {
 }
 
 .add-btn:hover {
-    background-color: #CDD6DD;
-    transition: background-color 250ms ease;
+    background-color: #CDD6DD!important;
+    transition: background-color 250ms ease!important;
 }
 
 .main {
@@ -116,10 +116,10 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-radius: 1em;
+    justify-content: center;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
-    background-color: #CDACA1;
+    background-color: rgba(205,202,204,.5);
     padding: 15px;
     color: white;
 }
@@ -131,4 +131,28 @@ p {
 
 #weatherRow {
     flex: 1;
+   
+}
+
+#setLocation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #CDACA1;
+    border-radius: 1em;
+}
+
+#setLocation input {
+    transition: border-color 250ms ease;
+    background-color: transparent;
+    border: 1px #CDCACC solid;
+    border-radius: 1em;
+    padding: 5px 15px;
+    color: white;
+}
+
+#setLocation input:focus {
+    transition: border-color 250ms ease;
+    border-color: #CDD6DD;
 }
