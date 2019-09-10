@@ -64,11 +64,9 @@ p {
 }
 
 .main {
-    min-height: 50vh;
-    min-width: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 20vw;
+    min-height: 40vh;
+    max-height: 70vh;
     border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
@@ -78,8 +76,6 @@ p {
 }
 
 .addItem {
-    display: flex;
-    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -101,7 +97,7 @@ p {
     max-height: 40vh;
     overflow: auto;
     width: 100%;
-    flex: 1;
+    
 }
 
 .App {
@@ -111,12 +107,11 @@ p {
 }
 
 .weather {
-    min-height: 20vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
+    
+    
     text-align: center;
-    justify-content: center;
+    
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
     background-color: rgba(205,202,204,.5);
@@ -125,12 +120,15 @@ p {
 }
 
 #listRow {
-    flex: 10;
     margin: 30px 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
 }
 
 #weatherRow {
-    flex: 1;
+    height: 15vh;
    
 }
 
