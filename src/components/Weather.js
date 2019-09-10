@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import uuid from 'uuid';
 
 export class Weather extends Component {
     constructor(props){
@@ -30,7 +31,7 @@ export class Weather extends Component {
     render() {
         const {minTemp, maxTemp} = this.state;
         const forecast = minTemp.map((current, i) => 
-            <div className="col">
+            <div className="col" key= {uuid.v4()}>
                 <h3>Day {i+1}</h3>
                 <br/>
                 <p>High: {maxTemp[i]}</p>

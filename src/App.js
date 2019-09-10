@@ -58,11 +58,16 @@ class App extends React.Component{
 
   render() {
     return (
+    
       <div className="App container-fluid">
+        <div className="row" id="weatherRow">
         <div className="weather">
           <Weather />
         </div>
+        </div>
+        
 
+        <div className="row" id="listRow">
         <div className="main">
           <h3 className="text-center" style={{color: "#CCFBFE", fontSize: "50px"}}>CampingList</h3>
           <List 
@@ -71,8 +76,11 @@ class App extends React.Component{
             deleteItem={this.deleteItem} />
             <AddItem addItem={this.addItem}/>       
         </div>  
-       
       </div>
+        </div>
+        
+        
+       
     );
   }
   

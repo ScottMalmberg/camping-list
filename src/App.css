@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
+    flex-direction: column;
 }
 
 p {
@@ -112,15 +112,23 @@ p {
 
 .weather {
     min-height: 20vh;
-    min-width: 40vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
     border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
     background-color: #CDACA1;
     padding: 15px;
     color: white;
-    margin-right: 25px;
+}
+
+#listRow {
+    flex: 10;
+    margin: 30px 0px;
+}
+
+#weatherRow {
+    flex: 1;
 }
