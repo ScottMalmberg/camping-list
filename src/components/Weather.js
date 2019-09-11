@@ -11,7 +11,8 @@ export class Weather extends Component {
             minTemp: [],
             maxTemp: [],
             dates: [],
-            icons: []    
+            icons: [],
+            description: []    
         };
     }
     
@@ -32,7 +33,8 @@ export class Weather extends Component {
                     minTemp: [...this.state.minTemp, Math.round(day.min_temp)], 
                     maxTemp: [...this.state.maxTemp, Math.round(day.max_temp)],
                     dates: [...this.state.dates, day.datetime.split('-').join()],
-                    icons: [...this.state.icons, "/icons/" + day.weather.icon + ".png"]
+                    icons: [...this.state.icons, "/icons/" + day.weather.icon + ".png"],
+                    description: [...this.state.description, day.weather.description]
                 })   
             })
         })
@@ -44,6 +46,7 @@ export class Weather extends Component {
         const forecast = minTemp.map((min, i) => 
             <div className="col" key= {uuid.v4()}>
                 <h3>{days[new Date(dates[i]).getDay()]}</h3>
+                <p>{this.state.description[i]}</p>
                 <img src={this.state.icons[i]} height="50px"></img>
                 <p>High: {maxTemp[i]}</p>
                 <p>Low: {min}</p> 
