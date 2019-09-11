@@ -95,6 +95,10 @@ p {
     border-color: #CDD6DD;
 }
 
+input::placeholder {
+    color: white;
+}
+
 .list {
     max-height: 40vh;
     overflow: auto;
@@ -108,19 +112,6 @@ p {
     background-repeat: no-repeat;
 }
 
-.weather {
-    width: 100vw;
-    
-    
-    text-align: center;
-    
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(25,25,25,.25);
-    background-color: rgba(205,202,204,.5);
-    padding: 15px;
-    color: white;
-}
-
 #listRow {
     margin: 30px 0px;
     width: 100%;
@@ -131,22 +122,21 @@ p {
 
 #weatherRow {
     height: 15vh;
-   
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(205,202,204,.75);
+    width: 100vw;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(25,25,25,.25);
+    padding: 15px;
+    color: white;
 }
 
-#setLocation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #CDACA1;
-    border-radius: 1em;
-}
 
 #setLocation input {
     transition: border-color 250ms ease;
     background-color: transparent;
-    border: 1px #CDCACC solid;
+    border: 1px white solid;
     border-radius: 1em;
     padding: 5px 15px;
     color: white;
@@ -154,5 +144,16 @@ p {
 
 #setLocation input:focus {
     transition: border-color 250ms ease;
-    border-color: #CDD6DD;
+    border-color: #CCFBFE;
+}
+
+
+#locationBtn {
+    border-color: white!important;
+    transition: background-color 250ms ease!important;
+}
+
+#locationBtn:hover {
+    background-color: #CDD6DD!important;
+    transition: background-color 250ms ease!important;
 }

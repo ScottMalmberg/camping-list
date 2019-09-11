@@ -9,7 +9,8 @@ export class Weather extends Component {
         this.state = {
             location: "",
             minTemp: [],
-            maxTemp: []    
+            maxTemp: [],
+            dates: []    
         };
     }
     
@@ -26,16 +27,21 @@ export class Weather extends Component {
         .then(results => {
             console.log(results);
             results.data.map(day => {
-                return this.setState({minTemp: [...this.state.minTemp, Math.round(day.min_temp)], maxTemp: [...this.state.maxTemp, Math.round(day.max_temp)]})   
+                return this.setState({
+                    minTemp: [...this.state.minTemp, Math.round(day.min_temp)], 
+                    maxTemp: [...this.state.maxTemp, Math.round(day.max_temp)],
+                    dates: [...this.state.dates, day.datetime.split('-').join()]
+                })   
             })
         })
     }
     
     render() {
-        const {minTemp, maxTemp} = this.state;
+        const {minTemp, maxTemp, dates} = this.state;
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const forecast = minTemp.map((min, i) => 
             <div className="col" key= {uuid.v4()}>
-                <h3>Day {i+1}</h3>
+                <h3>{days[new Date(dates[i]).getDay()]}</h3>
                 <br/>
                 <p>High: {maxTemp[i]}</p>
                 <p>Low: {min}</p> 
@@ -44,14 +50,15 @@ export class Weather extends Component {
         
         if(!this.state.location) {
             return (
-                <div className="row justify-content-center">
+                <div className="row" id="weatherRow">
                     <SetLocation setLocation={this.setLocation}/>
+                    
                 </div>
             )
         }
         else {
             return (
-                <div className="row">
+                <div className="row" id="weatherRow">
                     {forecast}
                 </div>
             )
