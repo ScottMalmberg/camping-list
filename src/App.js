@@ -69,13 +69,19 @@ class App extends React.Component{
 
         <div className="row" id="listRow">
         <div className="main">
-          <h3 className="text-center" style={{color: "#CCFBFE", fontSize: "50px"}}>CampingList</h3>
-          <List 
-            items={this.state.items} 
-            toggleComplete={this.toggleComplete} 
-            deleteItem={this.deleteItem} />
-            <AddItem addItem={this.addItem}/>       
+          <div id="listDiv">
+            <h3 className="text-center" style={{color: "#CCFBFE", fontSize: "50px"}}>CampingList</h3>
+            <List 
+              items={this.state.items} 
+              toggleComplete={this.toggleComplete} 
+              deleteItem={this.deleteItem} />
+          </div>
+          
+          <div id="addDiv">
+            <AddItem addItem={this.addItem}/> 
+          </div>        
         </div>  
+        
       </div>
         </div>
         

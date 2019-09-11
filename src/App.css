@@ -64,8 +64,7 @@ p {
 }
 
 .main {
-    width: 20vw;
-    min-height: 40vh;
+    min-height: 50vh;
     max-height: 70vh;
     border-radius: 1em;
     overflow: hidden;
@@ -73,6 +72,9 @@ p {
     background-color: #CDACA1;
     padding: 15px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .addItem {
