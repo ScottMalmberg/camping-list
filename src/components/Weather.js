@@ -38,6 +38,11 @@ export class Weather extends Component {
                 })   
             })
         })
+        .catch((err) => {
+            alert("Please input location in 'City, State' format");
+            console.log(err);
+            this.setState({location: ""})
+        })
     }
     
     render() {
@@ -47,7 +52,7 @@ export class Weather extends Component {
             <div className="col" key= {uuid.v4()}>
                 <h4>{days[new Date(dates[i]).getDay()]}</h4>
                 <p>{this.state.description[i]}</p>
-                <img src={this.state.icons[i]} height="40px" alt={this.state.description}></img>
+                <img src={this.state.icons[i]} height="40px" alt={"Image of " + this.state.description[i]} className="icon"></img>
                 <p>High: {maxTemp[i]}</p>
                 <p>Low: {min}</p> 
             </div>

@@ -59,8 +59,8 @@ p {
 }
 
 .main {
- 
-    min-width: 20vw;
+    min-height: 50%;
+    min-width: 15%;
     border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
@@ -160,10 +160,7 @@ input::placeholder {
     transition: background-color 250ms ease!important;
 }
 
-#weatherContainer {
-    
-}
-
-#listContainer {
-    
+.icon {
+    background-color: rgba(204,251,254,.5);
+    border-radius: .5em;
 }
