@@ -3,12 +3,7 @@
 }
 
 .container-fluid {
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    
 }
 
 p {
@@ -64,8 +59,7 @@ p {
 }
 
 .main {
-    min-height: 50vh;
-    max-height: 70vh;
+ 
     min-width: 20vw;
     border-radius: 1em;
     overflow: hidden;
@@ -111,6 +105,13 @@ input::placeholder {
     background-image: url('./images/forest.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    padding:0px;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+   
+    flex-direction: column;
 }
 
 #listRow {
@@ -118,11 +119,11 @@ input::placeholder {
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100%;
 }
 
 #weatherRow {
-    height: 20vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     background-color: rgba(205,202,204,.75);
@@ -157,4 +158,12 @@ input::placeholder {
 #locationBtn:hover {
     background-color: #CDD6DD!important;
     transition: background-color 250ms ease!important;
+}
+
+#weatherContainer {
+    
+}
+
+#listContainer {
+    
 }

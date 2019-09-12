@@ -45,9 +45,9 @@ export class Weather extends Component {
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const forecast = minTemp.map((min, i) => 
             <div className="col" key= {uuid.v4()}>
-                <h3>{days[new Date(dates[i]).getDay()]}</h3>
+                <h4>{days[new Date(dates[i]).getDay()]}</h4>
                 <p>{this.state.description[i]}</p>
-                <img src={this.state.icons[i]} height="50px"></img>
+                <img src={this.state.icons[i]} height="40px" alt={this.state.description}></img>
                 <p>High: {maxTemp[i]}</p>
                 <p>Low: {min}</p> 
             </div>

@@ -59,9 +59,8 @@ class App extends React.Component{
   render() {
     return (
     
-      <div className="App container-fluid">    
+      <div className="App container-fluid">  
         <Weather />
-
         <div className="row" id="listRow">
           <div className="main">
             <div id="listDiv">
@@ -78,7 +77,8 @@ class App extends React.Component{
         </div>  
         
         </div>
-      </div>
+        </div>
+
         
         
        
