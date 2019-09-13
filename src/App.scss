@@ -1,0 +1,179 @@
+@media only screen and (min-width: 795px) {
+
+}
+
+/* Variables */
+$transition: all 500ms ease;
+$blue: #CDD6DD;
+$light-blue: #CCFBFE; 
+$white-border: 1px white solid;
+$grey-border: 1px #CDCACC solid;
+
+/* General app styling */
+
+html {
+    line-height: 1.5;
+    color: white;
+}
+
+*:focus {
+    outline: none!important;
+}
+
+input::placeholder {
+    color: white;
+}
+
+p {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+#app-container {
+    background-image: url('./images/forest.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:0px;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Buttons */
+
+.button {
+    transition: $transition;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: white;
+    border: $grey-border;
+    padding: .25rem 1rem;
+
+    &:hover {
+        transition: $transition;
+        background-color: $blue;
+    }
+}
+
+.list-button {
+    border-radius: 50%;
+    border: none;
+    color: white;
+    padding: .25rem .5rem;
+}
+
+#check-button {
+    margin-right: .5rem;
+
+    &:hover {
+        background-color: rgba(204,251,254,.5);
+    }
+}
+
+#delete-button {
+    float: right;
+
+    &:hover {
+        background-color: #CD8987;
+    }
+}
+
+
+/* Forms */
+
+#item-form {
+    margin-top: 2rem;
+}
+
+/* Text input */
+
+.input {
+    transition: border-color 250ms ease;
+    background-color: transparent;
+    border: 1px #CDCACC solid;
+    border-radius: 1rem;
+    padding: .25rem 1.5rem;
+    color: white;
+    flex: 10;
+    margin-right: .25rem;
+
+    &:focus {
+        border-color: white;
+    }
+}
+
+/* Weather */
+
+#weather-row {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(205,202,204,.75);
+    width: 100vw;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(25,25,25,.25);
+    padding: 15px;
+    color: white;
+}
+
+.icon {
+    background-color: rgba(204,251,254,.5);
+    border-radius: .5rem;
+    margin: .5rem 0rem;
+}
+
+/* Todo */
+#list-row {
+    margin: 2rem 0rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#todo-container {
+    min-height: 50%;
+    min-width: 15%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(25,25,25,.25);
+    background-color: #CDACA1;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#list-heading {
+    color: $light-blue;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#list {
+    max-height: 40vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.item {
+    transition: $transition;
+    padding: .75rem;
+    border-bottom: $grey-border;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
