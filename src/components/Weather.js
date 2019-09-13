@@ -60,14 +60,14 @@ export class Weather extends Component {
         
         if(!this.state.location) {
             return (
-                <div className="row" id="weatherRow">
+                <div className="row" id="weather-row">
                     <SetLocation setLocation={this.setLocation}/>
                 </div>
             )
         }
         else {
             return (
-                <div className="row" id="weatherRow">
+                <div className="row" id="weather-row">
                     {forecast}
                 </div>
             )

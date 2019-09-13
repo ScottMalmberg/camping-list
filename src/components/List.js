@@ -16,8 +16,7 @@ class List extends React.Component{
         />);
 
         return (
-            <div className="list">  
-                                 
+            <div id="list">                     
                 {items}                     
             </div>
         );

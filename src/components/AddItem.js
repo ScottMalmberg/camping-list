@@ -19,20 +19,22 @@ export class AddItem extends Component {
 
     render() {
         return (
-            <form className="text-center addItem" onSubmit={this.onSubmit}>
+            <form className="form" id="item-form" onSubmit={this.onSubmit}>
                 <input 
                     type="text" 
                     name="name" 
                     placeholder="Add an item..." 
                     value={this.state.name} 
                     onChange={this.onChange}
-                    style={{flex: "10", marginRight: "5px"}}
                     autoComplete="off"
+                    className="input"
+                    id="item-input"
                 />              
                 <input 
                     type="submit" 
                     value="Add" 
-                    className="add-btn"
+                    className="button"
+                    id="add-button"
                     style={{flex:"1"}}                   
                 />
             </form>         

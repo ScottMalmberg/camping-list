@@ -19,22 +19,23 @@ export class SetLocation extends Component {
 
     render() {
         return (
-            <form className="text-center" id="setLocation" onSubmit={this.onSubmit}>
+            <form className="form" id="set-location" onSubmit={this.onSubmit}>
                 <h2>Where are you off to?</h2>
                 <input 
                     type="text" 
                     name="location" 
                     value={this.state.location}
                     onChange={this.onChange} 
-                    style={{flex: "10", marginRight: "5px"}}
                     autoComplete="off"
-                    id="locationInput"
+                    className="input"
+                    id="location-input"
                     placeholder='Type a location...'
                 />              
                 <input 
                     type="submit" 
                     value="Set" 
-                    id="locationBtn"
+                    className="button"
+                    id="location-button"
                     style={{flex:"1"}}                   
                 />
             </form>         

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import List from './components/List'
 import AddItem from './components/AddItem';
 import uuid from 'uuid';
@@ -59,19 +59,19 @@ class App extends React.Component{
   render() {
     return (
     
-      <div className="container-fluid" id="appContainer">  
+      <div className="container-fluid" id="app-container">  
         <Weather />
-        <div className="row" id="listRow">
-          <div className="main">
-            <div id="listDiv">
-              <h3 className="text-center" style={{color: "#CCFBFE", fontSize: "50px"}}>CampingList</h3>
+        <div className="row" id="list-row">
+          <div id="todo-container">
+            <div id="list-div">
+              <h3 id="list-heading">CampingList</h3>
               <List 
                 items={this.state.items} 
                 toggleComplete={this.toggleComplete} 
                 deleteItem={this.deleteItem} />
             </div>
             
-            <div id="addDiv">
+            <div id="add-div">
               <AddItem addItem={this.addItem}/> 
             </div>        
         </div>  
