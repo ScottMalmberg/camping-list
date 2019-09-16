@@ -1,6 +1,4 @@
-@media only screen and (min-width: 795px) {
 
-}
 
 /* Variables */
 $transition: all 500ms ease;
@@ -27,6 +25,14 @@ input::placeholder {
 p {
     margin-bottom: 0px;
     padding: 0px;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
 }
 
 #app-container {
@@ -126,7 +132,7 @@ p {
 
 /* Todo */
 #list-row {
-    margin: 2rem 0rem;
+    margin: 2rem 2rem;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -145,6 +151,14 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+}
+
+@media only screen and (max-width: 795px) {
+    #todo-container {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 #list-heading {
