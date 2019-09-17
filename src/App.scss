@@ -4,6 +4,7 @@
 $transition: all 500ms ease;
 $blue: #CDD6DD;
 $light-blue: #CCFBFE; 
+$tan: #CDACA1;
 $white-border: 1px white solid;
 $grey-border: 1px #CDCACC solid;
 
@@ -36,7 +37,7 @@ h3 {
 }
 
 #app-container {
-    background-image: url('./images/forest.jpg');
+    background-image: url('./images/' + random(24) + '.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding:0px;
@@ -60,6 +61,16 @@ h3 {
     &:hover {
         transition: $transition;
         background-color: $blue;
+    }
+}
+
+#location-button {
+    border: $white-border;
+
+    &:hover {
+        border-color: $light-blue;
+        background-color: $light-blue;
+        color: black;
     }
 }
 
@@ -88,10 +99,18 @@ h3 {
 
 /* Text input */
 
+#location-input {
+    border: $white-border;
+
+    &:focus {
+        border-color: $light-blue;
+    }
+}
+
 .input {
     transition: border-color 250ms ease;
     background-color: transparent;
-    border: 1px #CDCACC solid;
+    border: $grey-border;
     border-radius: 1rem;
     padding: .25rem 1.5rem;
     color: white;
@@ -102,6 +121,7 @@ h3 {
         border-color: white;
     }
 }
+
 
 /* Weather */
 
@@ -124,8 +144,8 @@ h3 {
 }
 
 .weather-day {
-    border-left: $grey-border;
-    border-right: $grey-border; 
+    border-left: $white-border;
+    border-right: $white-border; 
 }
 
 /* Todo */
@@ -143,7 +163,7 @@ h3 {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
-    background-color: #CDACA1;
+    background-color: $tan;
     padding: 1rem;
     color: white;
     display: flex;

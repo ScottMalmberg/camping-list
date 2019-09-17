@@ -58,7 +58,6 @@ class App extends React.Component{
 
   render() {
     return (
-    
       <div className="container-fluid" id="app-container">  
         <Weather />
         <div className="row" id="list-row">
@@ -74,17 +73,11 @@ class App extends React.Component{
             <div id="add-div">
               <AddItem addItem={this.addItem}/> 
             </div>        
-        </div>  
-        
+          </div>         
         </div>
-        </div>
-
-        
-        
-       
+      </div>
     );
-  }
-  
+  } 
 }
 
 export default App;

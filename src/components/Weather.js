@@ -15,9 +15,6 @@ export class Weather extends Component {
             description: []    
         };
     }
-    
-
-
 
     setLocation = (location) => {
         this.setState({location})
