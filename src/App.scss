@@ -86,13 +86,6 @@ h3 {
     }
 }
 
-
-/* Forms */
-
-#item-form {
-    margin-top: 2rem;
-}
-
 /* Text input */
 
 .input {
@@ -120,7 +113,7 @@ h3 {
     width: 100vw;
     text-align: center;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
-    padding: 15px;
+    padding: 1rem;
     color: white;
 }
 
@@ -128,6 +121,11 @@ h3 {
     background-color: rgba(204,251,254,.5);
     border-radius: .5rem;
     margin: .5rem 0rem;
+}
+
+.weather-day {
+    border-left: $grey-border;
+    border-right: $grey-border; 
 }
 
 /* Todo */
@@ -140,7 +138,7 @@ h3 {
 }
 
 #todo-container {
-    min-height: 50%;
+    height: 80%;
     min-width: 15%;
     border-radius: 1rem;
     overflow: hidden;
@@ -155,10 +153,41 @@ h3 {
 }
 
 @media only screen and (max-width: 795px) {
-    #todo-container {
-        height: 100%;
-        width: 100%;
+    .weather-day {
+        padding: 0;
+        
+        & h3 {
+            font-size: 1.2rem;
+        }
+        
+        & p {
+            font-size: .75rem;
+        }
     }
+
+    .icon {
+        height: 25px;
+    }
+    
+    #todo-container {
+        width: 50%;
+    }
+    
+}
+
+@media only screen and (max-width: 650px) {
+    .weather-day h3 {
+        font-size: 1rem;
+    }
+
+    #todo-container {
+        width: 80%;
+        height: 100%;
+    }
+}
+
+#list-div {
+    height: 100%;
 }
 
 #list-heading {
@@ -168,7 +197,7 @@ h3 {
 }
 
 #list {
-    max-height: 40vh;
+    max-height: 85%;
     overflow: auto;
     width: 100%;
 }
@@ -177,6 +206,13 @@ h3 {
     transition: $transition;
     padding: .75rem;
     border-bottom: $grey-border;
+}
+
+#add-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 
