@@ -34,8 +34,7 @@ export class AddItem extends Component {
                     type="submit" 
                     value="Add" 
                     className="button"
-                    id="add-button"
-                    style={{flex:"1"}}                   
+                    id="add-button"                                    
                 />
             </form>         
         );

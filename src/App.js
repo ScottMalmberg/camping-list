@@ -14,17 +14,17 @@ class App extends React.Component{
       items: [
         {
           id: uuid.v4(),
-          name: "Four person tent", 
+          name: "Tent", 
           completed: false
         },
         {
           id: uuid.v4(),
-          name: "Double sleeping bag", 
+          name: "Sleeping bag", 
           completed: false
         },
         {
           id: uuid.v4(),
-          name: "Pillows", 
+          name: "Camping chair", 
           completed: false
         }
       ]
@@ -63,7 +63,7 @@ class App extends React.Component{
         <div className="row" id="list-row">
           <div id="todo-container">
             <div id="list-div">
-              <h3 id="list-heading">CampingList</h3>
+              <h3 id="list-heading">Pack</h3>
               <List 
                 items={this.state.items} 
                 toggleComplete={this.toggleComplete} 
