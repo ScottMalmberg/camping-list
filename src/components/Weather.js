@@ -49,7 +49,9 @@ export class Weather extends Component {
             <div className="col weather-day" id= {"weather-day-" + i} key= {uuid.v4()}>
                 <h3>{days[new Date(dates[i]).getDay()]}</h3>
                 <p>{this.state.description[i]}</p>
-                <img src={this.state.icons[i]} height="40px" alt={"Image of " + this.state.description[i]} className="icon"></img>
+                <div className="icon-container">
+                    <img src={this.state.icons[i]} alt={"Image of " + this.state.description[i]} className="icon"></img>
+                </div>
                 <p>High: {maxTemp[i]}</p>
                 <p>Low: {min}</p> 
             </div>
