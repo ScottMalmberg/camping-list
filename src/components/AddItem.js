@@ -9,6 +9,10 @@ export class AddItem extends Component {
     onChange = (e) => this.setState({[e.target.name]: e.target.value});
 
     onSubmit = (e) => {
+        if(this.state.name == "") {
+            e.preventDefault();
+            return alert("You can't bring nothing to camp :) Try adding an item again!")
+        }
         // stops it from submitting to the file
         e.preventDefault();
         // passes up the input
