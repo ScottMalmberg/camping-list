@@ -57,6 +57,13 @@ class App extends React.Component{
   }
 
   render() {
+
+    // pick random background image
+    window.onload = function pickBackground() {
+      const randomNum = Math.floor(Math.random() * (24 - 1 + 1)) + 1;
+      return document.getElementById("app-container").style.backgroundImage = "url(./images/" + randomNum + ".jpg)";
+  }
+
     return (
       <div className="container-fluid" id="app-container">  
         <Weather />
