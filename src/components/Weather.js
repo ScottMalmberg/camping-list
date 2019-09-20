@@ -19,7 +19,7 @@ export class Weather extends Component {
     setLocation = (location) => {
         this.setState({location})
 
-        fetch('http://api.weatherbit.io/v2.0/forecast/daily?city=' + location + '&units=I&days=5&key=45215d29d9a7469e97f7d9879eaa6e0f')
+        fetch('https://api.weatherbit.io/v2.0/forecast/daily?city=' + location + '&units=I&days=5&key=45215d29d9a7469e97f7d9879eaa6e0f')
         .then(response => {
             return response.json();
         })
@@ -30,7 +30,7 @@ export class Weather extends Component {
                     minTemp: [...this.state.minTemp, Math.round(day.min_temp)], 
                     maxTemp: [...this.state.maxTemp, Math.round(day.max_temp)],
                     dates: [...this.state.dates, day.datetime.split('-').join()],
-                    icons: [...this.state.icons, "/icons/" + day.weather.icon + ".png"],
+                    icons: [...this.state.icons, "./icons/" + day.weather.icon + ".png"],
                     description: [...this.state.description, day.weather.description]
                 })   
             })
