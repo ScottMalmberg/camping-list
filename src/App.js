@@ -70,7 +70,7 @@ class App extends React.Component{
         <div className="row" id="list-row">
           <div id="todo-container">
             <div id="list-div">
-              <h3 id="list-heading">Pack</h3>
+              <h3 id="list-heading" className="list-heading">Pack</h3>
               <List 
                 items={this.state.items} 
                 toggleComplete={this.toggleComplete} 
@@ -80,6 +80,11 @@ class App extends React.Component{
             <div id="add-div">
               <AddItem addItem={this.addItem}/> 
             </div>        
+          </div>
+
+          <div id="landscape-add-div">
+            <h3 id="landscape-list-heading" className="list-heading">Pack</h3> 
+            <AddItem addItem={this.addItem}/>
           </div>         
         </div>
       </div>

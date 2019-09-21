@@ -3,7 +3,8 @@
 $transition: all 500ms ease;
 $blue: #CDD6DD;
 $light-blue: #CCFBFE; 
-$tan: #CDACA1;
+$transparent-grey: rgba(205,202,204,.75);
+$transparent-tan: rgba(205,172,161,.75);
 $white-border: 1px white solid;
 $grey-border: 1px #CDCACC solid;
 
@@ -13,6 +14,10 @@ html {
     line-height: 1.5;
     color: white;
     height: 100%;
+}
+
+body {
+    font-family: 'Livvic', sans-serif;
 }
 
 *:focus {
@@ -34,6 +39,7 @@ h2 {
 
 h3 {
     font-size: 1.4rem;
+    margin-bottom: 0;
 }
 
 #app-container {
@@ -123,16 +129,16 @@ h3 {
 /* Weather */
 
 #weather-row {
-    height: 100%;
+    height: fit-content;
     justify-content: center;
     align-items: center;
-    background-color: rgba(205,202,204,.75);
+    background-color: $transparent-grey;
     width: 100%;
     text-align: center;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
     padding: 1rem;
     color: white;
-    flex: 1;
+    overflow: auto;
 }
 
 .icon-container {
@@ -155,14 +161,7 @@ h3 {
     display: flex;
     flex-direction: column;
     height: auto;
-}
-
-.weather-header-container, .weather-description-container {
-    justify-self: flex-start
-}
-
-.weather-high-low-container {
-    justify-self: flex-end;
+    padding: 0 .25rem;
 }
 
 #weather-day-0 {
@@ -185,7 +184,7 @@ h3 {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(25,25,25,.25);
-    background-color: $tan;
+    background-color: $transparent-tan;
     padding: 1rem;
     color: white;
     display: flex;
@@ -194,9 +193,40 @@ h3 {
     
 }
 
-@media only screen and (max-width: 795px) {
+.list-heading {
+    color: $light-blue;
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#list {
+    max-height: 40vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.item {
+    transition: $transition;
+    padding: .75rem;
+    border-bottom: $grey-border;
+}
+
+#add-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#landscape-add-div {
+    display: none;
+}
+
+// mobile responsiveness
+@media only screen and (max-width: 900px) {
+
     .weather-day {
-        padding: 0;
         
         & h3 {
             font-size: 1.2rem;
@@ -208,6 +238,10 @@ h3 {
 
     }
     
+    .weather-description-container {
+        display: none;
+    }
+
     #todo-container {
         width: 50%;
     }
@@ -238,34 +272,45 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    #add-div, #list-heading {
+        display: none;
+    }
 
-#list-heading {
-    color: $light-blue;
-    font-size: 3rem;
-    text-align: center;
+    #landscape-add-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: $transparent-tan;
+        border-radius: .5rem;
+        box-shadow: 0 0 5px rgba(25,25,25,.25);
+    }
+
+    #list-row {
+        justify-content: space-evenly;
+    }
+
+    #todo-container {
+        height: fit-content;
+        width: fit-content;
+        max-height: 70vh;
+        padding: 1rem;
+    }
+
+    #list {
+        max-height: 70vh;
+ 
+    }
+
 }
 
-#list {
-    max-height: 40vh;
-    overflow: auto;
-    width: 100%;
+@media only screen and (max-width: 900px) and (max-height: 380px) and (orientation: landscape) {
+    #list {
+        height: 40vh;
+    }
 }
-
-.item {
-    transition: $transition;
-    padding: .75rem;
-    border-bottom: $grey-border;
-}
-
-#add-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-
-
 
 
 

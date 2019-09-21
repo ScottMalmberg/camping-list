@@ -12,7 +12,8 @@ export class Weather extends Component {
             maxTemp: [],
             dates: [],
             icons: [],
-            description: []    
+            description: [],
+            prob: []    
         };
     }
 
@@ -29,9 +30,10 @@ export class Weather extends Component {
                 return this.setState({
                     minTemp: [...this.state.minTemp, Math.round(day.min_temp)], 
                     maxTemp: [...this.state.maxTemp, Math.round(day.max_temp)],
-                    dates: [...this.state.dates, day.datetime.split('-').join()],
+                    dates: [...this.state.dates, day.datetime.split('-').join('-')],
                     icons: [...this.state.icons, "./icons/" + day.weather.icon + ".png"],
-                    description: [...this.state.description, day.weather.description]
+                    description: [...this.state.description, day.weather.description],
+                    prob: [...this.state.prob, day.pop]
                 })   
             })
         })
@@ -43,7 +45,7 @@ export class Weather extends Component {
     }
     
     render() {
-        const {minTemp, maxTemp, dates} = this.state;
+        const {minTemp, maxTemp, dates, description, prob, icons} = this.state;
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const forecast = minTemp.map((min, i) => 
             <div className="col weather-day" id= {"weather-day-" + i} key= {uuid.v4()}>
@@ -51,14 +53,15 @@ export class Weather extends Component {
                     <h3>{days[new Date(dates[i]).getDay()]}</h3>
                 </div>
                 <div className="weather-description-container">
-                    <p>{this.state.description[i]}</p>
+                    <p>{description[i]}</p>
                 </div>
                 <div className="icon-container">
-                    <img src={this.state.icons[i]} alt={"Image of " + this.state.description[i]} className="icon"></img>
+                    <img src={icons[i]} alt={"Image of " + this.state.description[i]} className="icon"></img>
                 </div>
-                <div className="weather-high-low-container">
+                <div className="weather-numbers-container">
                     <p>High: {maxTemp[i]}</p>
-                    <p>Low: {min}</p> 
+                    <p>Low: {min}</p>
+                    <p>Precip: {prob[i]}%</p> 
                 </div>
             </div>
         )
