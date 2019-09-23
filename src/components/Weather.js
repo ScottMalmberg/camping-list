@@ -59,8 +59,8 @@ export class Weather extends Component {
                     <img src={icons[i]} alt={"Image of " + this.state.description[i]} className="icon"></img>
                 </div>
                 <div className="weather-numbers-container">
-                    <p>High: {maxTemp[i]}</p>
-                    <p>Low: {min}</p>
+                    <p>High: {maxTemp[i]}°</p>
+                    <p>Low: {min}°</p>
                     <p>Precip: {prob[i]}%</p> 
                 </div>
             </div>
