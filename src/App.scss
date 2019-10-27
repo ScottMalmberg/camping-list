@@ -138,7 +138,7 @@ h3 {
     box-shadow: 0 0 5px rgba(25,25,25,.25);
     padding: 1rem;
     color: white;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .icon-container {
@@ -194,10 +194,12 @@ h3 {
 }
 
 .list-heading {
-    color: $light-blue;
-    font-size: 4rem;
-    text-align: center;
-    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    & img {
+        max-height: 50px;
+    }
 }
 
 #list {

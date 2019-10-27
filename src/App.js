@@ -61,7 +61,7 @@ class App extends React.Component{
     // pick random background image
     window.onload = function pickBackground() {
       const randomNum = Math.floor(Math.random() * (24 - 1 + 1)) + 1;
-      return document.getElementById("app-container").style.backgroundImage = "url(./images/" + randomNum + ".jpg)";
+      return document.getElementById("app-container").style.backgroundImage = "url(./images/backgrounds/" + randomNum + ".jpg)";
   }
 
     return (
@@ -70,7 +70,9 @@ class App extends React.Component{
         <div className="row" id="list-row">
           <div id="todo-container">
             <div id="list-div">
-              <h3 id="list-heading" className="list-heading">Pack</h3>
+              <div id="list-heading" className="list-heading">
+                <img src="./images/PACK.png" alt="Pack logo"/>
+              </div>
               <List 
                 items={this.state.items} 
                 toggleComplete={this.toggleComplete} 
@@ -83,7 +85,9 @@ class App extends React.Component{
           </div>
 
           <div id="landscape-add-div">
-            <h3 id="landscape-list-heading" className="list-heading">Pack</h3> 
+            <div id="landscape-list-heading" className="list-heading">
+                <img src="./images/PACK.png" alt="Pack logo"/>
+            </div>
             <AddItem addItem={this.addItem}/>
           </div>         
         </div>
